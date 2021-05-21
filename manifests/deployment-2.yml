@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "pythonbootcamp01-d21f"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "pythonbootcamp01-d21f"
+  template:
+    metadata:
+      labels:
+        app: "pythonbootcamp01-d21f"
+    spec:
+      containers:
+        - name: "pythonbootcamp01-d21f"
+          image: "testpython123.azurecr.io/pythonbootcamp01"
+          ports:
+          - containerPort: 80
