@@ -9,4 +9,4 @@ def frogs():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='52.162.89.227', port='80')
